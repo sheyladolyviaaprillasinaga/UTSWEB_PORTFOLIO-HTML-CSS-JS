@@ -1,0 +1,224 @@
+<!DOCTYPE html> <!-- Deklarasi jenis dokumen HTML -->
+<html lang="en"> <!-- Penulisan dalam bahasa Inggris -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Pengaturan karakter UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Pengaturan tampilan responsif -->
+    <title>Portofolio</title> <!-- Judul halaman web -->
+
+    <!-- Menghubungkan berkas CSS eksternal -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style.css"> <!-- Menghubungkan dengan berkas CSS kustom -->
+</head>
+
+<body>
+    <!-- Desain Header -->
+    <header class="header"> <!-- Bagian header -->
+
+        <!-- Tautan ke beranda dengan judul "Portofolio" -->
+        <a href="#" class="logo">Portofolio</a>
+
+        <!-- Ikon menu yang dapat diklik untuk tampilan mobile -->
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <!-- Navigasi header -->
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a> <!-- Tautan aktif ke beranda -->
+            <a href="#about">About</a> <!-- Tautan ke bagian "About" -->
+            <a href="#services">Services</a> <!-- Tautan ke bagian "Services" -->
+            <a href="#portofolio">Portofolio</a> <!-- Tautan ke bagian "Portofolio" -->
+            <a href="#contact">Contact</a> <!-- Tautan ke bagian "Contact" -->
+        </nav>
+    </header>
+<!-- Desain bagian beranda -->
+<section class="home" id="home"> <!-- Bagian beranda dengan ID "home" -->
+
+    <!-- Konten beranda -->
+    <div class="home-content">
+        <h3>Hello, it's Me</h3> <!-- Judul "Hello, it's Me" -->
+        <h1>Sheyla Sinaga</h1> <!-- Nama "Sheyla Sinaga" -->
+        <h3>Dan saya seorang <span class="multiple-text"></span></h3> <!-- Deskripsi pekerjaan (akan diperbarui secara dinamis) -->
+        <p>Saya adalah Siswa SMK Telkom</p> <!-- Informasi tambahan (Siswa SMK Telkom) -->
+
+        <!-- Media sosial -->
+        <div class="social-media">
+            <a target="_blank" href="https://youtube.com/@sheyla1484?si=-EGOV_KzBDegc_zp"><i class='bx bxl-youtube' ></i></a> <!-- Tautan ke YouTube -->
+            <a target="_blank" href="https://api.whatsapp.com/send/?phone=%2B628882611604&text&type=phone_number&app_absent=0"><i class='bx bxl-whatsapp' ></i></a> <!-- Tautan ke WhatsApp -->
+            <a target="_blank" href="https://instagram.com/yvsheylasinaga?igshid=MzRlODBiNWFlZA=="><i class='bx bxl-instagram' ></i></a> <!-- Tautan ke Instagram -->
+        </div>
+
+        <a href="" class="btn">Download CV</a> <!-- Tombol untuk mengunduh CV -->
+    </div>
+
+    <!-- Gambar beranda -->
+    <div class="home-img">
+        <img src="foto 14.png" alt=""> <!-- Gambar profil -->
+    </div>
+</section>
+
+    
+<!-- Desain bagian "Tentang Saya" -->
+<section class="about" id="about"> <!-- Bagian "Tentang Saya" dengan ID "about" -->
+
+    <!-- Gambar "Tentang Saya" -->
+    <div class="about-img">
+        <img src="foto 14.png" alt=""> <!-- Gambar profil atau foto -->
+    </div>
+
+    <!-- Konten "Tentang Saya" -->
+    <div class="about-content">
+        <h2 class="heading">Tentang <span>Saya</span></h2> <!-- Judul "Tentang Saya" -->
+        <h3>Pelajar</h3> <!-- Status "Pelajar" -->
+        <p>Saya adalah Seorang Pelajar SMK Telkom Purwokerto. Saya Mengambil Kejuruan RPL/PPLG. <!-- Deskripsi pendidikan dan jurusan -->
+            Saya lahir di Purwokerto tanggal 20 April tahun 2007. Saya lulusan dari SMP Susteran Purwokerto.</p> <!-- Informasi tambahan -->
+        <a href="#" class="btn">Baca Selengkapnya</a> <!-- Tombol untuk membaca lebih lanjut -->
+    </div>
+</section>
+
+<!-- Desain bagian "Layanan Kami" -->
+<section class="services" id="services"> <!-- Bagian "Layanan Kami" dengan ID "services" -->
+
+    <h2 class="heading">Layanan <span>Kami</span></h2> <!-- Judul "Layanan Kami" -->
+
+    <!-- Kontainer untuk layanan-layanan -->
+    <div class="services-container">
+        
+        <!-- Kotak layanan pertama -->
+        <div class="services-box">
+            <i class='bx bx-code-alt'></i> <!-- Ikon Web Development -->
+            <h3>Web Development</h3> <!-- Judul "Web Development" -->
+            <p>Saya sudah mulai belajar dan memahami Web Development saat saya bersekolah di SMK Telkom dan saya sedang mengembangkan skill saya.</p> <!-- Deskripsi layanan Web Development -->
+            <a href="#" class="btn">Baca Selengkapnya</a> <!-- Tombol untuk membaca lebih lanjut -->
+        </div>
+
+        <!-- Kotak layanan kedua -->
+        <div class="services-box">
+            <i class='bx bxs-paint'></i> <!-- Ikon Design Grafis -->
+            <h3>Design Grafis</h3> <!-- Judul "Design Grafis" -->
+            <p>Saya sudah mulai belajar dan memahami Web Design saat saya bersekolah di SMK Telkom dan saya sedang mengembangkan skill saya.</p> <!-- Deskripsi layanan Design Grafis -->
+            <a href="#" class="btn">Baca Selengkapnya</a> <!-- Tombol untuk membaca lebih lanjut -->
+        </div>
+
+        <!-- Kotak layanan ketiga -->
+        <div class="services-box">
+            <i class='bx bx-bar-chart-alt'></i> <!-- Ikon UI/UX -->
+            <h3>UI/UX</h3> <!-- Judul "UI/UX" -->
+            <p>Saya sudah mulai belajar dan memahami UI/UX saat saya bersekolah di SMK Telkom dan saya sedang mengembangkan skill saya.</p> <!-- Deskripsi layanan UI/UX -->
+            <a href="#" class="btn">Baca Selengkapnya</a> <!-- Tombol untuk membaca lebih lanjut -->
+        </div>
+    </div>
+</section>
+
+    <!-- Desain bagian "Portofolio" -->
+<section class="portofolio" id="portofolio"> <!-- Bagian "Portofolio" dengan ID "portofolio" -->
+
+    <h2 class="heading">Proyek <span>Terbaru</span></h2> <!-- Judul "Proyek Terbaru" -->
+
+    <!-- Kontainer untuk daftar portofolio -->
+    <div class="portofolio-container">
+
+        <!-- Kotak portofolio pertama -->
+        <div class="portovolio-box">
+            <img src="Screenshot 2023-09-05 204409.png" alt=""> <!-- Gambar proyek -->
+            <div class="portofolio-layer">
+                <h4>Website</h4> <!-- Jenis proyek (Website) -->
+                <p>Website cv Portofolio kelas 10</p> <!-- Deskripsi proyek -->
+                <a href="#"><i class='bx bx-link-external' ></i></a> <!-- Tautan eksternal (jika ada) -->
+            </div>
+        </div>
+
+        <!-- Kotak portofolio kedua -->
+        <div class="portovolio-box">
+            <img src="Screenshot 2023-09-05 204449.png" alt=""> <!-- Gambar proyek -->
+            <div class="portofolio-layer">
+                <h4>Arduino</h4> <!-- Jenis proyek (Arduino) -->
+                <p>Arduino Project</p> <!-- Deskripsi proyek -->
+                <a href="#"><i class='bx bx-link-external' ></i></a> <!-- Tautan eksternal (jika ada) -->
+            </div>
+        </div>
+
+        <!-- Kotak portofolio ketiga -->
+        <div class="portovolio-box">
+            <img src="Screenshot 2023-09-05 204520.png" alt=""> <!-- Gambar proyek -->
+            <div class="portofolio-layer">
+                <h4>Design</h4> <!-- Jenis proyek (Design) -->
+                <p>Design Nirmana</p> <!-- Deskripsi proyek -->
+                <a href="#"><i class='bx bx-link-external' ></i></a> <!-- Tautan eksternal (jika ada) -->
+            </div>
+        </div>
+
+        <!-- Kotak portofolio keempat -->
+        <div class="portovolio-box">
+            <img src="Screenshot 2023-09-05 204543.png" alt=""> <!-- Gambar proyek -->
+            <div class="portofolio-layer">
+                <h4>Sketsa</h4> <!-- Jenis proyek (Sketsa) -->
+                <p>Sketsa di AI</p> <!-- Deskripsi proyek -->
+                <a href="#"><i class='bx bx-link-external' ></i></a> <!-- Tautan eksternal (jika ada) -->
+            </div>
+        </div>
+
+        <!-- Kotak portofolio kelima -->
+        <div class="portovolio-box">
+            <img src="Screenshot 2023-09-05 204604.png" alt=""> <!-- Gambar proyek -->
+            <div class="portofolio-layer">
+                <h4>Aplikasi</h4> <!-- Jenis proyek (Aplikasi) -->
+                <p>Aplikasi Food Online menggunakan aplikasi Visual Studio</p> <!-- Deskripsi proyek -->
+                <a href="#"><i class='bx bx-link-external' ></i></a> <!-- Tautan eksternal (jika ada) -->
+            </div>
+        </div>
+
+        <!-- Kotak portofolio keenam -->
+        <div class="portovolio-box">
+            <img src="Screenshot 2023-09-05 204629.png" alt=""> <!-- Gambar proyek -->
+            <div class="portofolio-layer">
+                <h4>Website</h4> <!-- Jenis proyek (Website) -->
+                <p>Website Howl's Cafstel tentang cafe dessert</p> <!-- Deskripsi proyek -->
+                <a href="#"><i class='bx bx-link-external' ></i></a> <!-- Tautan eksternal (jika ada) -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Desain bagian "Kontak" -->
+<section class="contact" id="contact"> <!-- Bagian "Kontak" dengan ID "contact" -->
+    <h2 class="heading">Kontak <span>Saya!!</span></h2> <!-- Judul "Kontak Saya!!" -->
+
+    <!-- Formulir kontak -->
+    <form action="#">
+        <div class="input-box">
+            <input type="text" placeholder="Nama Lengkap"> <!-- Kotak input nama -->
+            <input type="email" placeholder="Alamat Email"> <!-- Kotak input alamat email -->
+        </div>
+        <div class="input-box">
+            <input type="number" placeholder="Nomor Telepon"> <!-- Kotak input nomor telepon -->
+            <input type="text" placeholder="Subjek Email"> <!-- Kotak input subjek email -->
+        </div>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Pesan Anda"></textarea> <!-- Kotak input pesan -->
+        <input type="submit" value="Kirim Pesan" class="btn"> <!-- Tombol untuk mengirim pesan -->
+    </form>
+</section>
+
+<!-- Desain bagian "Footer" -->
+<footer class="footer" id="footer"> <!-- Bagian "Footer" dengan ID "footer" -->
+    <div class="footer-text">
+        <p>hak cipta &copy; 2023 oleh Sheyla | Seluruh Hak Dilindungi.</p> <!-- Teks hak cipta dan hak dilindungi -->
+    </div>
+
+    <div class="footer-iconTop">
+        <a href="#home"><i class='bx bx-up-arrow-alt'></i></a> <!-- Tautan untuk kembali ke bagian atas halaman -->
+    </div>
+</footer>
+
+<!-- Skrip Scroll Reveal untuk efek muncul saat digulirkan -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<!-- Skrip Typed.js untuk efek ketik teks -->
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+<!-- Skrip kustom (script.js) -->
+<script src="script.js"></script> <!-- Berkas JavaScript kustom -->
+
+</body>
+
+</html>

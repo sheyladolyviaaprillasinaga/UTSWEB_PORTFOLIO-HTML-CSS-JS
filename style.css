@@ -1,0 +1,685 @@
+/* Impor font "Poppins" dari Google Fonts untuk digunakan di seluruh halaman */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Pengaturan global untuk elemen HTML dan seluruh halaman */
+* {
+    margin: 0; /* Margin nol */
+    padding: 0; /* Padding nol */
+    box-sizing: border-box; /* Kotak berbatasan */
+    text-decoration: none; /* Dekorasi teks nonaktif */
+    border: none; /* Border nonaktif */
+    outline: none; /* Outline nonaktif */
+    scroll-behavior: smooth; /* Efek animasi saat scrolling halus */
+    font-family: 'poppins', sans-serif; /* Pengaturan font family */
+}
+
+
+/* Ini adalah CSS kustom yang menggunakan variabel CSS */
+:root {
+    /* Variabel untuk warna latar belakang utama */
+    --bg-color: #1f242d;
+    /* Variabel untuk warna latar belakang sekunder */
+    --second-bg-color: #323946;
+    /* Variabel untuk warna teks */
+    --text-color: #fff;
+    /* Variabel untuk warna utama dalam desain */
+    --main-color: #0ef;
+}
+
+/* Ini adalah CSS untuk mengatur tampilan halaman web */
+/* Pada bagian ini, ukuran font dasar diatur menjadi 62.5% dari ukuran standar.  */
+html {
+    font-size: 62.5%;
+    /* Menghilangkan overflow horizontal pada halaman web. */
+    overflow-x: hidden;
+}
+/* Ini adalah gaya dasar untuk elemen <body> pada halaman web */
+body {
+    /* Mengatur latar belakang halaman dengan warna dari variabel --bg-color yang telah ditentukan */
+    background: var(--bg-color);
+    
+    /* Mengatur warna teks pada halaman dengan warna dari variabel --text-color yang telah ditentukan */
+    color: var(--text-color);
+}
+
+
+/* Ini adalah CSS yang mengatur gaya untuk elemen <section> */
+
+/* Mengatur tinggi minimum elemen <section> agar selalu mencapai tinggi layar penuh (100vh) */
+section {
+    min-height: 100vh;
+/* Mengatur padding atas, kanan, bawah, dan kiri pada elemen <section> */
+    padding: 10rem 9% 2rem;
+}
+
+/* Ini adalah gaya untuk elemen dengan kelas "header" */
+/* Mengatur elemen "header" menjadi posisi tetap di atas halaman */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    /* Mengatur padding atas dan bawah serta margin kanan dan kiri pada elemen "header" */
+    padding: 2rem 9%;
+    /* Mengatur latar belakang elemen "header" dengan warna dari variabel --bg-color yang telah ditentukan */
+    background: var(--bg-color);
+    /* Mengatur tampilan flex untuk konten dalam "header" */
+    display: flex;
+    /* Mengatur penyebaran ruang di antara elemen dalam "header" */
+    justify-content: space-between;
+    /* Mengatur penempatan vertikal elemen dalam "header" */
+    align-items: center;
+    /* Menentukan tingkat z-indeks untuk mengatur tumpukan elemen */
+    z-index: 100;
+}
+
+/* Ini adalah gaya tambahan untuk elemen "header" ketika dalam mode "sticky" */
+/* Menambahkan garis bawah dengan ketebalan 0.1rem pada elemen "header" ketika dalam mode "sticky" */
+.header.sticky {
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+}
+
+/* Ini adalah gaya untuk elemen dengan kelas "logo" dalam "header" */
+/* Mengatur ukuran font, warna, bobot huruf, dan kursor untuk elemen dengan kelas "logo" */
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+
+/* Ini adalah gaya untuk tautan di dalam elemen dengan kelas "navbar" */
+/* Mengatur ukuran font, warna teks, jarak kiri, dan efek transisi tautan */
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: 2s; /* Efek transisi 2 detik saat perubahan warna */
+}
+
+/* Ini adalah gaya untuk tautan yang sedang dihover atau aktif di dalam elemen dengan kelas "navbar" */
+/* Mengubah warna tautan menjadi warna utama ketika dihover atau aktif */
+.navbar a:hover, 
+.navbar a.active {
+    color: var(--main-color);
+}
+
+/* Ini adalah gaya untuk elemen dengan ID "menu-icon" */
+/* Mengatur ukuran font, warna teks, dan menyembunyikan elemen "menu-icon" */
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+/* Ini adalah gaya untuk elemen dengan kelas "home" */
+/* Mengatur tampilan flex untuk konten dalam elemen "home" */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ini adalah gaya untuk gambar dalam elemen dengan kelas "home-img" */
+/* Mengatur lebar gambar menjadi 35vw dan menerapkan animasi "floatImage" selama 4 detik */
+.home-img img {
+    width: 35vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Ini adalah gaya untuk elemen <h3> di dalam elemen dengan kelas "home-content" */
+/* Mengatur ukuran font, bobot huruf, dan berat teks elemen <h3> */
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+/* Ini adalah gaya khusus untuk elemen <h3> kedua di dalam elemen dengan kelas "home-content" */
+/* Mengatur jarak bawah pada elemen <h3> kedua */
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+/* Ini adalah gaya untuk elemen <span> */
+/* Mengatur warna teks pada elemen <span> */
+span {
+    color: var(--main-color);
+}
+
+/* Ini adalah gaya untuk elemen <h1> di dalam elemen dengan kelas "home-content" */
+/* Mengatur ukuran font, bobot huruf, dan tinggi baris elemen <h1> */
+.home-content h1 {
+    font-size: 6.5rem;
+    font-weight: 700;   
+    line-height: 1.3;
+}
+
+/* Ini adalah gaya untuk elemen <p> di dalam elemen dengan kelas "home-content" */
+/* Mengatur ukuran font elemen <p> */
+.home-content p {
+    font-size: 1.6rem;
+}
+
+/* Ini adalah gaya untuk tautan media sosial di dalam elemen dengan kelas "social-media" */
+/* Mengatur tampilan tautan media sosial */
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease; /* Efek transisi selama 0.5 detik */
+}
+
+/* Ini adalah gaya tambahan untuk tautan media sosial ketika dihover */
+/* Mengubah latar belakang, warna teks, dan menambahkan bayangan kotak ketika tautan media sosial dihover */
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+
+/* Ini adalah gaya untuk elemen dengan kelas "btn" */
+
+/* Mengatur tampilan tombol, termasuk ukuran font, latar belakang, bayangan kotak, dan lainnya */
+.btn {
+    display: inline-block; /* Menampilkan tombol sebagai elemen inline blok */
+    padding: 1rem 2.8rem; /* Padding (ruang dalam) tombol */
+    background: var(--main-color); /* Latar belakang tombol menggunakan variabel --main-color */
+    border-radius: 4rem; /* Mengatur sudut border tombol */
+    box-shadow: 0 0 1rem var(--main-color); /* Menambahkan bayangan kotak pada tombol */
+    font-size: 1.6rem; /* Ukuran font tombol */
+    color: var(--second-bg-color); /* Warna teks tombol */
+    letter-spacing: .1rem; /* Spasi antar huruf pada teks tombol */
+    font-weight: 600; /* Ketebalan huruf tombol */
+    transition: .5s ease; /* Efek transisi selama 0.5 detik saat tombol dihover */
+}
+
+/* Ini adalah gaya tambahan untuk tombol ketika dihover */
+/* Menghilangkan bayangan kotak pada tombol ketika dihover */
+.btn:hover {
+    box-shadow: none;
+}
+
+/* Ini adalah gaya untuk elemen dengan kelas "about" */
+/* Mengatur tampilan elemen "about", termasuk tampilan flex, jarak, dan latar belakang */
+.about {
+    display: flex; /* Menampilkan elemen sebagai flex container */
+    justify-content: center; /* Penyusunan konten secara horizontal ke tengah */
+    align-items: center; /* Penyusunan konten secara vertikal ke tengah */
+    gap: 2rem; /* Jarak antar elemen-elemen child di dalam flex container */
+    background: var(--second-bg-color); /* Latar belakang elemen "about" menggunakan variabel --second-bg-color */
+}
+
+/* Ini adalah gaya untuk gambar dalam elemen dengan kelas "about-img" */
+/* Mengatur lebar gambar menjadi 35vw dan menerapkan animasi "floatImage" selama 4 detik */
+.about-img img {
+    width: 35vw; /* Lebar gambar sebesar 35% dari lebar viewport */
+    animation: floatImage 4s ease-in-out infinite; /* Menerapkan animasi "floatImage" ke gambar */
+}
+
+/* Ini adalah gaya untuk elemen dengan kelas "heading" */
+/* Mengatur tampilan teks dalam elemen "heading" */
+.heading {
+    text-align: center; /* Penyusunan teks ke tengah secara horizontal */
+    font-size: 4.5rem; /* Ukuran font teks */
+}
+
+/* Ini adalah gaya untuk elemen <h2> di dalam elemen dengan kelas "about-content" */
+/* Mengatur tampilan teks dalam elemen <h2>, termasuk penjajaran dan tinggi baris */
+.about-content h2 {
+    text-align: left; /* Penyusunan teks ke kiri secara horizontal */
+    line-height: 1.2; /* Tinggi baris teks sebesar 1.2 kali ukuran font */
+}
+
+/* Ini adalah gaya untuk elemen <h3> di dalam elemen dengan kelas "about-content" */
+/* Mengatur ukuran font elemen <h3> */
+.about-content h3 {
+    font-size: 2.6rem; /* Ukuran font elemen <h3> sebesar 2.6 rem */
+}
+
+/* Ini adalah gaya untuk elemen <p> di dalam elemen dengan kelas "about-content" */
+/* Mengatur ukuran font elemen <p> dan margin */
+.about-content p {
+    font-size: 1.6rem; /* Ukuran font elemen <p> sebesar 1.6 rem */
+    margin: 2rem 0 3rem; /* Margin atas: 2 rem, margin bawah: 3 rem, margin sisi kiri-kanan: 0 */
+}
+
+
+/* Ini adalah gaya untuk elemen <h2> dalam elemen dengan kelas "services" */
+/* Mengatur margin bawah elemen <h2> */
+.services h2 {
+    margin-bottom: 5rem; /* Margin bawah sebesar 5 rem */
+}
+
+/* Ini adalah gaya untuk kontainer dengan kelas "services-container" */
+/* Mengatur tampilan kontainer, termasuk tampilan flex, penyusunan konten, wrapping, jarak, dan lainnya */
+.services-container {
+    display: flex; /* Menampilkan kontainer sebagai flex container */
+    justify-content: center; /* Penyusunan konten secara horizontal ke tengah */
+    align-items: center; /* Penyusunan konten secara vertikal ke tengah */
+    flex-wrap: wrap; /* Mengizinkan wrapping elemen-elemen ke baris berikutnya */
+    gap: 2rem; /* Jarak antar elemen-elemen child di dalam flex container */
+}
+
+/* Ini adalah gaya untuk kotak layanan dengan kelas "services-box" dalam kontainer layanan */
+/* Mengatur beberapa properti kotak layanan, termasuk flex, latar belakang, padding, border, transformasi, dan lainnya */
+.services-container .services-box {
+    flex: 1 1 30rem; /* Pengaturan ukuran kotak layanan dalam flex container */
+    background: var(--second-bg-color); /* Latar belakang kotak layanan menggunakan variabel --second-bg-color */
+    padding: 3rem 2rem 4rem; /* Padding kotak layanan */
+    border-radius: 2rem; /* Mengatur sudut border kotak layanan */
+    text-align: center; /* Penyusunan teks dalam kotak layanan ke tengah */
+    border: .2rem solid var(--bg-color); /* Border kotak layanan */
+    transform: .5s ease; /* Efek transformasi selama 0.5 detik saat kotak layanan berubah */
+}
+
+/* Ini adalah gaya tambahan untuk kotak layanan ketika dihover */
+/* Mengubah warna border kotak layanan dan menerapkan efek transformasi skala ketika dihover */
+.services-container .services-box:hover {
+    border-color: var(--main-color); /* Mengubah warna border saat dihover menggunakan variabel --main-color */
+    transform: scale(1.02); /* Efek transformasi skala ketika dihover */
+}
+
+/* Ini adalah gaya untuk ikon dalam kotak layanan */
+/* Mengatur ukuran font dan warna ikon dalam kotak layanan */
+.services-box i {
+    font-size: 7rem; /* Ukuran font ikon sebesar 7 rem */
+    color: var(--main-color); /* Warna ikon menggunakan variabel --main-color */
+}
+
+/* Ini adalah gaya untuk elemen <h3> dalam kotak layanan */
+/* Mengatur ukuran font elemen <h3> */
+.services-box h3 {
+    font-size: 2.6rem; /* Ukuran font elemen <h3> sebesar 2.6 rem */
+}
+
+/* Ini adalah gaya untuk elemen <p> dalam kotak layanan */
+/* Mengatur ukuran font elemen <p> dan margin */
+.services-box p {
+    font-size: 1.6rem; /* Ukuran font elemen <p> sebesar 1.6 rem */
+    margin: 1rem 0 3rem; /* Margin atas: 1 rem, margin bawah: 3 rem, margin sisi kiri-kanan: 0 */
+}
+
+/* Ini adalah gaya untuk elemen dengan kelas "portofolio" */
+/* Mengatur latar belakang elemen dengan variabel --second-bg-color */
+.portofolio {
+    background: var(--second-bg-color); /* Latar belakang menggunakan variabel --second-bg-color */
+}
+
+/* Ini adalah gaya untuk elemen <h2> di dalam elemen dengan kelas "portofolio" */
+/* Mengatur margin bawah elemen <h2> */
+.portofolio h2{
+    margin-bottom: 4rem; /* Margin bawah sebesar 4 rem */
+}
+
+/* Ini adalah gaya untuk kontainer dengan kelas "portofolio-container" */
+/* Mengatur tampilan kontainer, termasuk tampilan grid, template kolom, penyusunan konten, jarak, dan lainnya */
+.portofolio-container {
+    display: grid; /* Menampilkan kontainer sebagai grid container */
+    grid-template-columns: repeat(3, 1fr); /* Template kolom grid dengan tiga kolom seimbang */
+    align-items: center; /* Penyusunan konten secara vertikal ke tengah */
+    gap: 2.5rem; /* Jarak antar elemen-elemen grid */
+}
+
+
+/* Ini adalah gaya untuk kotak portofolio dengan kelas "portovolio-box" dalam kontainer portofolio */
+/* Mengatur beberapa properti dasar kotak portofolio, termasuk posisi, border-radius, bayangan kotak, overflow, dan tampilan flex */
+.portofolio-container .portovolio-box {
+    position: relative; /* Menetapkan posisi elemen sebagai relatif terhadap posisi normalnya */
+    border-radius: 2rem; /* Mengatur sudut border kotak portofolio */
+    box-shadow: 0 0 1rem var(--bg-color); /* Menambahkan bayangan kotak dengan warna dari variabel --bg-color */
+    overflow: hidden; /* Mengatur elemen untuk menyembunyikan kontennya yang melebihi batas kotak */
+    display: flex; /* Menampilkan elemen sebagai flex container */
+}
+
+/* Ini adalah gaya untuk gambar dalam elemen dengan kelas "portovolio-box" */
+/* Mengatur lebar gambar menjadi 100% dan menerapkan efek transisi */
+.portovolio-box img {
+    width: 100%; /* Lebar gambar sebesar 100% dari lebar kontainer */
+    transition: .5s ease; /* Efek transisi selama 0.5 detik saat gambar berubah */
+}
+
+/* Ini adalah gaya tambahan untuk gambar ketika kotak portofolio dihover */
+/* Mengubah skala gambar ketika kotak portofolio dihover */
+.portovolio-box:hover img {
+    transform: scale(1.1); /* Efek transformasi skala gambar menjadi 1.1 kali ukuran normalnya saat dihover */
+}
+
+/* Ini adalah gaya untuk lapisan portofolio dengan kelas "portofolio-layer" dalam kotak portofolio */
+
+/* Mengatur beberapa properti lapisan portofolio, termasuk posisi, ukuran, latar belakang linear gradient, tampilan flex, penjajaran, arah flex, penjajaran teks, padding, transformasi, dan efek transisi */
+.portovolio-box .portofolio-layer {
+    position: absolute; /* Menetapkan posisi elemen sebagai absolut terhadap elemen yang memiliki posisi relatif */
+    bottom: 0; /* Menempatkan elemen di bagian bawah kotak portofolio */
+    left: 0; /* Menempatkan elemen di bagian kiri kotak portofolio */
+    width: 100%; /* Lebar elemen sebesar 100% dari lebar kotak portofolio */
+    height: 100%; /* Tinggi elemen sebesar 100% dari tinggi kotak portofolio */
+    background: linear-gradient(rgba(0, 0, 0, 1), var(--main-color)); /* Latar belakang dengan gradient linear dari hitam ke warna utama menggunakan variabel --main-color */
+    display: flex; /* Menampilkan elemen sebagai flex container */
+    justify-content: center; /* Penyusunan konten secara horizontal ke tengah */
+    align-items: center; /* Penyusunan konten secara vertikal ke tengah */
+    flex-direction: column; /* Arah elemen flex dalam kolom */
+    text-align: center; /* Penyusunan teks dalam elemen ke tengah */
+    padding: 0 4rem; /* Padding (ruang dalam) elemen di sisi kiri dan kanan */
+    transform: translateY(100%); /* Menggeser elemen ke bawah sebesar 100% dari tinggi kotak portofolio */
+    transition: .5s ease; /* Efek transisi selama 0.5 detik saat lapisan portofolio berubah */
+}
+
+/* Ini adalah gaya tambahan untuk lapisan portofolio ketika kotak portofolio dihover */
+/* Menggeser lapisan portofolio ke atas dengan transformasi saat dihover */
+.portovolio-box:hover .portofolio-layer {
+    transform: translateY(0); /* Menggeser elemen ke atas sebesar 0, menampilkan lapisan portofolio saat dihover */
+}
+
+/* Ini adalah gaya untuk elemen <h4> dalam lapisan portofolio */
+/* Mengatur ukuran font elemen <h4> */
+.portofolio-layer h4 {
+    font-size: 3rem; /* Ukuran font elemen <h4> sebesar 3 rem */
+}
+
+/* Ini adalah gaya untuk elemen <p> dalam lapisan portofolio */
+/* Mengatur ukuran font elemen <p> dan margin */
+.portofolio-layer p {
+    font-size: 1.6rem; /* Ukuran font elemen <p> sebesar 1.6 rem */
+    margin: .3rem 0 1rem; /* Margin atas: 0.3 rem, margin bawah: 1 rem, margin sisi kiri-kanan: 0 */
+}
+
+/* Ini adalah gaya untuk tautan dalam lapisan portofolio dengan kelas "portofolio-layer a" */
+
+/* Mengatur beberapa properti tautan, termasuk tampilan inline-flex, penyusunan konten, ukuran, latar belakang, dan border-radius */
+.portofolio-layer a {
+    display: inline-flex; /* Menampilkan tautan sebagai elemen inline flex */
+    justify-content: center; /* Penyusunan konten secara horizontal ke tengah */
+    align-items: center; /* Penyusunan konten secara vertikal ke tengah */
+    width: 5rem; /* Lebar tautan sebesar 5 rem */
+    height: 5rem; /* Tinggi tautan sebesar 5 rem */
+    background: var(--text-color); /* Latar belakang tautan menggunakan variabel --text-color */
+    border-radius: 50%; /* Mengatur sudut border tautan sehingga menjadi lingkaran */
+}
+
+/* Ini adalah gaya untuk ikon dalam tautan dalam lapisan portofolio */
+/* Mengatur ukuran font ikon dalam tautan dan warna ikon */
+.portofolio-layer a i {
+    font-size: 2rem; /* Ukuran font ikon sebesar 2 rem */
+    color: var(--second-bg-color); /* Warna ikon menggunakan variabel --second-bg-color */
+}
+
+/* Ini adalah gaya untuk elemen <h2> dalam elemen dengan kelas "contact" */
+/* Mengatur margin bawah elemen <h2> */
+.contact h2 {
+    margin-bottom: 3rem; /* Margin bawah sebesar 3 rem */
+}
+
+/* Ini adalah gaya untuk formulir dalam elemen dengan kelas "contact" */
+/* Mengatur beberapa properti formulir, termasuk lebar maksimum, margin, penjajaran teks, dan margin bawah */
+.contact form {
+    max-width: 70rem; /* Lebar maksimum formulir sebesar 70 rem */
+    margin: 1rem auto; /* Margin pada sisi atas dan bawah serta otomatis di tengah */
+    text-align: center; /* Penjajaran teks dalam formulir ke tengah */
+    margin-bottom: 3rem; /* Margin bawah sebesar 3 rem */
+}
+
+/* Ini adalah gaya untuk kotak input dalam formulir dengan kelas "input-box" */
+/* Mengatur tampilan kotak input, termasuk tampilan flex, penjajaran konten, wrapping, dan jarak antar elemen */
+.contact form .input-box {
+    display: flex; /* Menampilkan kotak input sebagai flex container */
+    justify-content: space-between; /* Penyusunan konten dengan jarak yang sama antara elemen-elemen */
+    flex-wrap: wrap; /* Mengizinkan wrapping elemen-elemen ke baris berikutnya jika kurang ruang */
+}
+
+/* Ini adalah gaya untuk input dan textarea dalam formulir */
+/* Mengatur beberapa properti input dan textarea, termasuk lebar, padding, ukuran font, warna teks, latar belakang, border-radius, dan margin */
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%; /* Lebar input dan textarea sebesar 100% dari lebar kotak input */
+    padding: 1.5rem; /* Padding (ruang dalam) input dan textarea */
+    font-size: 1.6rem; /* Ukuran font input dan textarea sebesar 1.6 rem */
+    color: var(--text-color); /* Warna teks menggunakan variabel --text-color */
+    background: var(--second-bg-color); /* Latar belakang input dan textarea menggunakan variabel --second-bg-color */
+    border-radius: .8rem; /* Mengatur sudut border input dan textarea */
+    margin: .7rem 0; /* Margin atas dan bawah sebesar 0.7 rem, margin sisi kiri-kanan 0 */
+}
+
+/* Ini adalah gaya untuk input dalam kotak input dengan kelas "input-box" dalam formulir kontak */
+
+/* Mengatur lebar input agar 49% dari lebar kotak input */
+.contact form .input-box input {
+    width: 49%;
+}
+
+/* Ini adalah gaya untuk textarea dalam formulir kontak */
+
+/* Menghilangkan kemampuan resize pada textarea */
+.contact form textarea {
+    resize: none; /* Mencegah pengguna mengubah ukuran textarea */
+}
+
+/* Ini adalah gaya untuk tombol dalam formulir kontak */
+/* Mengatur margin atas tombol, serta mengubah kursor menjadi pointer saat dihover */
+.contact form .btn {
+    margin-top: 2rem; /* Margin atas tombol sebesar 2 rem */
+    cursor: pointer; /* Mengubah tampilan kursor menjadi pointer saat dihover */
+}
+
+/* Ini adalah gaya untuk elemen dengan kelas "footer" */
+/* Mengatur tampilan elemen "footer", termasuk tampilan flex, penyusunan konten, wrapping, padding, dan latar belakang */
+.footer {
+    display: flex; /* Menampilkan elemen sebagai flex container */
+    justify-content: space-between; /* Penyusunan konten dengan jarak yang sama antara elemen-elemen */
+    align-items: center; /* Penyusunan konten secara vertikal ke tengah */
+    flex-wrap: wrap; /* Mengizinkan wrapping elemen-elemen ke baris berikutnya jika kurang ruang */
+    padding: 2rem 9%; /* Padding (ruang dalam) elemen pada sisi atas dan bawah, serta sisi kiri dan kanan */
+    background: var(--second-bg-color); /* Latar belakang elemen menggunakan variabel --second-bg-color */
+}
+
+/* Ini adalah gaya untuk teks dalam elemen dengan kelas "footer-text" */
+/* Mengatur ukuran font teks dalam elemen "footer-text" */
+.footer-text p {
+    font-size: 1.6rem; /* Ukuran font teks sebesar 1.6 rem */
+}
+
+/* Ini adalah gaya untuk tautan dalam elemen dengan kelas "footer-iconTop" */
+/* Mengatur beberapa properti tautan, termasuk tampilan inline-flex, penyusunan konten, padding, latar belakang, border-radius, dan efek transisi */
+.footer-iconTop a {
+    display: inline-flex; /* Menampilkan tautan sebagai elemen inline flex */
+    justify-content: center; /* Penyusunan konten secara horizontal ke tengah */
+    align-items: center; /* Penyusunan konten secara vertikal ke tengah */
+    padding: .8rem; /* Padding (ruang dalam) tautan */
+    background: var(--main-color); /* Latar belakang tautan menggunakan variabel --main-color */
+    border-radius: .8rem; /* Mengatur sudut border tautan */
+    transition: .5s ease; /* Efek transisi selama 0.5 detik saat tautan dihover */
+}
+
+/* Ini adalah gaya tambahan untuk tautan dalam elemen "footer-iconTop" ketika dihover */
+/* Mengubah tampilan box-shadow tautan saat dihover */
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color); /* Menambahkan bayangan kotak dengan warna dari variabel --main-color saat tautan dihover */
+}
+
+/* Ini adalah gaya untuk ikon dalam tautan dalam elemen "footer-iconTop" */
+/* Mengatur ukuran font ikon dan warna ikon dalam tautan */
+.footer-iconTop a i {
+    font-size: 2.4rem; /* Ukuran font ikon sebesar 2.4 rem */
+    color: var(--second-bg-color); /* Warna ikon menggunakan variabel --second-bg-color */
+}
+
+/* BREAKPOINTS */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .services {
+        padding-bottom: 7rem;
+    }
+
+    .portofolio {
+        padding-bottom: 7rem;
+    }
+
+    .contact {
+        min-width: auto;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+    
+    
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+
+/* Ini adalah gaya tambahan untuk elemen "navbar" ketika memiliki kelas "active" */
+
+/* Menampilkan elemen "navbar" ketika memiliki kelas "active" */
+.navbar.active {
+    display: block;
+}
+
+/* Ini adalah gaya untuk tautan dalam elemen "navbar" */
+/* Mengatur tampilan tautan, termasuk tampilan block, ukuran font, dan margin */
+.navbar a {
+    display: block; /* Menampilkan tautan sebagai elemen block */
+    font-size: 2rem; /* Ukuran font tautan sebesar 2 rem */
+    margin: 3rem 0; /* Margin atas dan bawah tautan sebesar 3 rem, margin sisi kiri-kanan 0 */
+}
+
+/* Ini adalah gaya untuk elemen dengan kelas "home" */
+/* Mengatur penyusunan konten dalam elemen "home" menjadi tata letak kolom */
+.home {
+    flex-direction: column; /* Mengubah tata letak flex menjadi kolom */
+}
+
+/* Ini adalah gaya untuk teks dalam elemen dengan kelas "home-content h3" */
+/* Mengatur ukuran font teks dalam elemen "home-content h3" */
+.home-content h3 {
+    font-size: 2.6rem; /* Ukuran font taktak sebesar 2.6 rem */
+}
+
+/* Ini adalah gaya untuk teks dalam elemen dengan kelas "home-content h1" */
+/* Mengatur ukuran font teks dalam elemen "home-content h1" */
+.home-content h1 {
+    font-size: 5rem; /* Ukuran font teks sebesar 5 rem */
+}
+
+/* Ini adalah gaya untuk gambar dalam elemen dengan kelas "home-img img" */
+/* Mengatur lebar gambar sebesar 70vw dan margin atas sebesar 4 rem */
+.home-img img {
+    width: 70vw; /* Lebar gambar sebesar 70% dari lebar viewport */
+    margin-top: 4rem; /* Margin atas sebesar 4 rem */
+}
+
+/* Ini adalah gaya untuk elemen dengan kelas "about" */
+/* Mengatur penyusunan konten dalam elemen "about" menjadi kolom-reverse */
+.about {
+    flex-direction: column-reverse; /* Mengubah tata letak flex menjadi kolom dengan elemen terbalik (reverse) */
+}
+
+/* Ini adalah gaya untuk gambar dalam elemen "about" */
+/* Mengatur lebar gambar sebesar 70vw dan margin atas sebesar 4 rem */
+.about img {
+    width: 70vw; /* Lebar gambar sebesar 70% dari lebar viewport */
+    margin-top: 4rem; /* Margin atas sebesar 4 rem */
+}
+
+/* Ini adalah gaya untuk teks dalam elemen dengan kelas "services h2" */
+/* Mengatur margin bawah teks dalam elemen "services h2" sebesar 3 rem */
+.services h2 {
+    margin-bottom: 3rem; /* Margin bawah sebesar 3 rem */
+}
+
+/* Ini adalah gaya untuk teks dalam elemen dengan kelas "portofolioh2" */
+/* Mengatur margin bawah teks dalam elemen "portofolioh2" sebesar 3 rem */
+.portofolioh2 {
+    margin-bottom: 3rem; /* Margin bawah sebesar 3 rem */
+}
+
+/* Ini adalah gaya untuk elemen dengan kelas "portofolio-container" */
+/* Mengatur tata letak grid dengan dua kolom yang memiliki lebar yang sama (1fr) */
+.portofolio-container {
+    grid-template-columns: repeat(2, 1fr); /* Grid dengan dua kolom, masing-masing memiliki lebar 1 fr */
+}
+
+@media (max-width: 617px) {
+    .portofolio-container {
+        grid-template-columns: 1fr ;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .contact form .input-box input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 365px) {
+    .home-img img {
+        width: 90vw;
+    }
+
+    .about-img img {
+        width: 90vw;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer p {
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
